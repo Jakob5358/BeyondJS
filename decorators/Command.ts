@@ -9,6 +9,7 @@ export interface RawCommand {
   options: ApplicationCommandOption[];
   group?: string;
   root?: string;
+  params?: unknown[];
   run: CommandRun;
 }
 

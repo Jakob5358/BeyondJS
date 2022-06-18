@@ -8,6 +8,7 @@ export type Context<T extends GatewayEvent> = [Bot, ...RemoveFirst<Parameters<Ev
 export interface Listener<T extends GatewayEvent = GatewayEvent> {
   event: GatewayEvent;
   once: boolean;
+  params?: unknown[];
   trigger: (args: Context<T>) => unknown;
 }
 
