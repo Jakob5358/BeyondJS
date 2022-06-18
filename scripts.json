@@ -1,0 +1,10 @@
+{
+  "$schema": "https://deno.land/x/denon@2.5.0/schema.json",
+  "scripts": {
+    "start": {
+      "cmd": "deno run -c tsconfig.json --import-map ./imports.json mod.ts",
+      "desc": "Run the bot"
+    }
+  },
+  "allow": ["read", "net", "env"]
+}
