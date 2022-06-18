@@ -1,5 +1,5 @@
 import { Command } from 'beyondjs';
-import { Interaction, sendInteractionResponse, Bot, InteractionResponseTypes } from 'discordeno';
+import { Interaction, sendInteractionResponse, InteractionResponseTypes } from 'discordeno';
 
 export class ExampleController {
   constructor() {}
