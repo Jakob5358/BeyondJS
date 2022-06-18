@@ -1,10 +1,11 @@
-import { getMetadata } from '../decorators/mod.ts';
+import { getMetadata, setParameterMetadata } from '../decorators/mod.ts';
 import { Collection } from 'discordeno';
 import { Constructable } from '../types/mod.ts';
 
 class Container {
   private register = new Collection<string, Constructable>();
   private cache = new Collection<string, unknown>();
+  private values = new Collection<symbol, unknown>();
 
   private resolveDeps(Target: Constructable) {
     const params = getMetadata<Constructable[]>('design:paramtypes', Target) ?? [];
@@ -24,6 +25,17 @@ class Container {
 
   add(service: Constructable) {
     this.register.set(service.name, service);
+  }
+
+  makeInjector(value: unknown, context: string) {
+    const sym = Symbol();
+
+    this.values.set(sym, value);
+    return setParameterMetadata(context, (target, key, index) => {
+      const params = getMetadata<{ params?: unknown[] }>(context, target, key)?.params ?? [];
+      params[index] = value;
+      return { params };
+    });
   }
 }
 export const container = new Container();

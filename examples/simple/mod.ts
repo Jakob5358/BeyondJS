@@ -2,6 +2,7 @@ import 'dotenv';
 import { createBot, GatewayIntents } from 'discordeno';
 import { startBot, loadControllers } from 'beyondjs';
 import { enableCachePlugin, enableCacheSweepers } from '@discordeno/cache';
+import { CommonController } from './common/Common.controller.ts';
 
 const bot = enableCachePlugin(
   createBot({
@@ -13,5 +14,5 @@ const bot = enableCachePlugin(
 
 enableCacheSweepers(bot);
 
-loadControllers(bot);
+loadControllers(bot, CommonController);
 await startBot(bot);

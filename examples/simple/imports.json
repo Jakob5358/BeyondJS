@@ -1,6 +1,6 @@
 {
   "imports": {
-    "beyondjs": "https://deno.land/x/beyondjs@0.0.3/mod.ts",
+    "beyondjs": "https://deno.land/x/beyondjs@0.0.4/mod.ts",
     "discordeno": "https://deno.land/x/discordeno@13.0.0-rc45/mod.ts",
     "@discordeno/cache": "https://deno.land/x/discordeno@13.0.0-rc45/plugins/cache/mod.ts",
     "dotenv": "https://deno.land/std@0.140.0/dotenv/load.ts"
