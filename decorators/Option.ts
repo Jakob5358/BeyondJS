@@ -1,8 +1,7 @@
 // deno-lint-ignore-file ban-types
 
-import { setParameterMetadata, MetadataKeys, RawCommand } from './mod.ts';
+import { setParameterMetadata, MetadataKeys, RawCommand, getMetadata } from './mod.ts';
 import { ApplicationCommandOptionTypes } from 'discordeno';
-import { getMetadata } from 'reflection';
 
 const resolveType = (type?: string) => {
   if (type?.toLowerCase().includes('channel')) return { type: ApplicationCommandOptionTypes.Channel, isMember: false };

@@ -1,4 +1,3 @@
-import 'reflection';
 import { Service } from '../structs/mod.ts';
 import { setClassMetadata, MetadataKeys } from './mod.ts';
 

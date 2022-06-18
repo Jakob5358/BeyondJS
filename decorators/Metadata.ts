@@ -1,6 +1,6 @@
 // deno-lint-ignore-file no-explicit-any
-import { getMetadata, defineMetadata } from 'reflection';
-import { deepmerge } from 'deepmerge';
+import { deepmerge } from 'https://deno.land/x/deepmergets@v4.1.0/dist/deno/index.ts';
+import { getMetadata, defineMetadata } from './mod.ts';
 
 export enum MetadataKeys {
   Controller = 'a',

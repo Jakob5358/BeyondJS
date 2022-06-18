@@ -1,4 +1,4 @@
-import { getMetadata } from 'reflection';
+import { getMetadata } from '../decorators/mod.ts';
 import { Collection } from 'discordeno';
 import { Constructable } from '../types/mod.ts';
 

@@ -1,7 +1,6 @@
 import { startBot as startDiscordenoBot, EventHandlers, Collection, ApplicationCommandOptionTypes, Bot } from 'discordeno';
-import { Command, Listener, MetadataKeys, Describable, RawCommand } from '../decorators/mod.ts';
+import { Command, Listener, MetadataKeys, Describable, RawCommand, getMetadata } from '../decorators/mod.ts';
 import { Cog, Constructable } from '../types/mod.ts';
-import { getMetadata } from 'reflection';
 import { container } from './mod.ts';
 
 const cogs = new Collection<string, Cog>();
