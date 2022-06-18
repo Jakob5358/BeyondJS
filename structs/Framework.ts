@@ -103,8 +103,6 @@ export const loadControllers = (bot: Bot, ...controllers: Constructable[]) => {
 };
 
 export const startBot = async (bot: Bot) => {
-  // console.log(Deno.inspect(cogs.map(cog => cog.commands).flat(), { depth: 10 }));
   await bot.helpers.upsertApplicationCommands(cogs.map(cog => cog.commands).flat());
   await startDiscordenoBot(bot);
-  // await new Promise(res => res(0));
 };
