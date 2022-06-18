@@ -3,7 +3,6 @@
     "discordeno": "https://deno.land/x/discordeno@13.0.0-rc45/mod.ts",
     "reflection": "https://deno.land/x/reflection@0.0.2/mod.ts",
     "deepmerge": "https://deno.land/x/deepmergets@v4.1.0/dist/deno/index.ts",
-    "std/node": "https://deno.land/std@0.144.0/node/module.ts",
     "std-testing": "https://deno.land/std@0.144.0/testing/asserts.ts"
   }
 }

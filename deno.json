@@ -5,6 +5,7 @@
   "importMap": "./imports.json",
   "tasks": {
     "start": "deno run --allow-read --allow-net --allow-env mod.ts",
-    "dev": "deno run --watch --allow-read --allow-net --allow-env mod.ts"
+    "dev": "deno run --watch --allow-read --allow-net --allow-env mod.ts",
+    "check": "deno check mod.ts"
   }
 }
